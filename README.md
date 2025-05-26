@@ -80,10 +80,10 @@ from xor import xor, keygen
 key = keygen("key.txt", 1024)
 
 # Encrypt a string
-encrypted = xor("Hello, world!", "key.txt", data_from_file=False)
+encrypted = xor("Hello, world!", "key.txt")
 
 # Decrypt it back
-decrypted = xor(encrypted.decode(), "key.txt", data_from_file=False)
+decrypted = xor(encrypted.decode(), "key.txt")
 print(decrypted.decode())  # Output: Hello, world!
 ```
 
