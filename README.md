@@ -77,13 +77,13 @@ You can also import `xor.py` into other Python scripts:
 from xor import xor, keygen
 
 # Generate a 1024-byte key
-key = keygen("key.txt", 1024)
+key = keygen("key.txt", 1024) # outputting the key to a file is optional
 
 # Encrypt a string
-encrypted = xor("Hello, world!", "key.txt")
+encrypted = xor("Hello, world!", "key.txt", key_from_file=True) # grabbing the key from the file
 
 # Decrypt it back
-decrypted = xor(encrypted.decode(), "key.txt")
+decrypted = xor(encrypted.decode(), key) # using the key from memory
 print(decrypted.decode())  # Output: Hello, world!
 ```
 

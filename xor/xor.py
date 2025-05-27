@@ -1,3 +1,6 @@
+# MIT License
+# Copyright (c) 2025 0xsweat
+# See LICENSE file for full license text.
 """
 Author : 0xsweat
 Date : 2025/05/24
@@ -25,7 +28,7 @@ def keygen(output="key.txt", keysize=4096) -> bytes:
         f.write(bytes(key, encoding="UTF-8"))
     return bytes(key, encoding="UTF-8")
 
-def xor(data: str | bytes, key: str | bytes, output="", data_from_file=False, key_from_file=True) -> bytes:
+def xor(data: str | bytes, key: str | bytes, output="", data_from_file=False, key_from_file=False) -> bytes:
     """
     This function performs XOR encryption/decryption on the given data using the provided key.
 
