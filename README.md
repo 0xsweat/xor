@@ -12,7 +12,7 @@
 Install via PyPI:
 
 ```bash
-pip install xor
+pip install xor-py
 ```
 
 Or clone directly from GitHub:
@@ -20,7 +20,7 @@ Or clone directly from GitHub:
 ```bash
 git clone https://github.com/0xsweat/xor
 cd xor
-python xor.py --help
+python3 xor.py --help
 ```
 
 ---
@@ -32,13 +32,13 @@ python xor.py --help
 Create a random key (default: 4096 bytes) and it saves it to `key.txt`:
 
 ```bash
-python xor.py -g
+python3 xor.py -g
 ```
 
 Customize key size and output file:
 
 ```bash
-python xor.py -g -ks 2048 -o mykey.txt
+python3 xor.py -g -ks 2048 -o mykey.txt
 ```
 
 ---
@@ -46,7 +46,7 @@ python xor.py -g -ks 2048 -o mykey.txt
 ### 🔒 Encrypt or 🔓 Decrypt a File
 
 ```bash
-python xor.py -f input.txt -k key.txt -o output.enc
+python3 xor.py -f input.txt -k key.txt -o output.enc
 ```
 
 This applies XOR encryption/decryption using the provided key file. The process is symmetric — use the same command to encrypt or decrypt.
@@ -58,7 +58,7 @@ This applies XOR encryption/decryption using the provided key file. The process 
 If no input file is given, you'll be prompted to enter the plaintext and key manually:
 
 ```bash
-python xor.py
+python3 xor.py
 ```
 
 Example prompt:
